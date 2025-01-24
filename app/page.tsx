@@ -1,101 +1,87 @@
-import Image from "next/image";
+'use client';
+import React from 'react';
+import Image from 'next/image';
+import { Navbar } from '../components/Navbar';
+import { Features } from '../components/Features';
+import { Products } from '../components/Products';
+import { Footer } from '../components/Footer';
 
-export default function Home() {
+const BotolWebsite = () => {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <div className="min-h-screen bg-white text-black overflow-visible font-familjen">
+        <Navbar />
+        <main className="flex justify-center items-center mt-20 relative px-4 sm:px-0">
+          <div className="relative flex flex-col items-center w-full">
+            {/* Main Heading */}
+            <div className="text-4xl sm:text-6xl font-bold text-center z-10">
+              The Ultimate Companion
+              <br />
+              for Hydration
+            </div>
+            
+            {/* Sub Heading */}
+            <div className="text-xl sm:text-2xl text-center mt-4 z-10">
+              we believe in the power of hydration.
+              <br />
+              Our mission is simple yet vital
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+            {/* Background Image */}
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/assets/bg.svg"
+              alt="Background"
+              width={680}
+              height={400}
+              className="absolute top-12 left-1/2 transform -translate-x-1/2 h-auto max-w-full max-h-full z-0"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+
+            {/* Water Bottle Images */}
+            <div className="relative mt-20 z-10">
+              <Image
+                src="/assets/Bottol-Down.png"
+                alt="Water bottle body"
+                width={560}
+                height={800}
+                className="relative top-12 w-full"
+              />
+              <Image
+                src="/assets/Bottol-Cap.png"
+                alt="Water bottle cap"
+                width={560}
+                height={200}
+                className="absolute top-12 w-full"
+              />
+            </div>
+
+            <div className="flex justify-center items-center w-full absolute top-0 mt-[500px] z-10">
+              <div className="flex w-1/2 sm:w-1/2">
+                <Image
+                  src="/assets/2.svg"
+                  alt="Small Bottle 1"
+                  width={120}
+                  height={120}
+                />
+              </div>
+              <div className="flex justify-end w-1/2 sm:w-1/3">
+                <Image
+                  src="/assets/3.svg"
+                  alt="Small Bottle 2"
+                  width={120}
+                  height={120}
+                />
+              </div>
+            </div>
+          </div>
+        </main>
+
+        {/* Additional Sections */}
+        <Features />
+        <Products />
+        <Footer />
+      </div>
+    </>
   );
-}
+};
+
+export default BotolWebsite;
