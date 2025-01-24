@@ -19,7 +19,6 @@ export function Products() {
                 </button>
             </div>
 
-            {/* First Row of Products */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-12 mt-12 px-4 md:px-16 lg:px-24">
                 <ProductCard
                     imageSrc="/assets/products/p1.png"
@@ -57,7 +56,6 @@ export function Products() {
                 />
             </div>
 
-            {/* Spacer */}
             <div className="mt-16 bg-white h-32"></div>
         </div>
     );
@@ -66,7 +64,6 @@ export function Products() {
 function ProductCard({ imageSrc, altText, title }: ProductCardProps) {
     return (
         <div className="flex flex-col items-center md:items-start">
-            {/* Product Image */}
             <div className="relative">
                 <Image
                     src={imageSrc}
@@ -77,7 +74,6 @@ function ProductCard({ imageSrc, altText, title }: ProductCardProps) {
                 />
             </div>
 
-            {/* Title and Button Container */}
             <div className="flex flex-col items-center md:items-start w-full mt-4">
                 <h2 className="font-semibold text-xl md:text-2xl">{title}</h2>
                 <button className="bg-gradient-to-r from-[#00d1ff] to-[#1a83ff] text-white px-4 md:px-6 py-2 mt-2 rounded-full text-sm font-semibold hover:from-[#1a83ff] hover:to-[#00d1ff] transition-all duration-300">

@@ -44,7 +44,7 @@ export function Navbar() {
         <a href="#" className="block mt-4 lg:inline-block lg:mt-0 mr-7 text-black text-xl">
           Custom
         </a>
-        <button className="bg-gradient-to-r from-[#00d1ff] to-[#1a83ff] text-white px-6 py-2 mr-7 rounded-full text-xl mt-4 lg:mt-0 w-full lg:w-auto">
+        <button className="bg-gradient-to-r from-[#00d1ff] to-[#1a83ff] hover:from-[#1a83ff] hover:to-[#00d1ff] transition-all duration-300 text-white px-6 py-2 mr-7 rounded-full text-xl mt-4 lg:mt-0 w-full lg:w-auto">
           Inquiry Now
         </button>
       </div>

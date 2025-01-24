@@ -5,7 +5,7 @@ export function Footer() {
         <div className="bg-[rgba(32,31,31,1)] text-white">
             <div className="w-full">
                 <Image
-                    src="/assets/final.png"
+                    src="/assets/final.svg"
                     alt="Footer Image"
                     width={1200}
                     height={300}
@@ -38,24 +38,20 @@ export function Footer() {
                     </div>
 
                     <div className="flex flex-col text-lg space-y-4">
-                        <ul className="flex flex-wrap space-x-2 md:space-x-10 md:justify-end">
-
-                           <li className="w-1/4 md:w-auto ">Shop</li>
-                            <li className="w-1/2 md:w-auto">Contact Us</li>
-                            <li className="w-1/4 md:w-auto">About</li>
-                            <li className="w-1/2 md:w-auto">Journal</li>
-                            <li className="w-1/6 md:w-auto">Custom</li>
-
+                        <ul className="grid grid-cols-2 gap-2 md:flex md:flex-wrap md:space-x-10 md:justify-end">
+                            <li className="w-full md:w-auto">Shop</li>
+                            <li className="w-full md:w-auto">Contact Us</li>
+                            <li className="w-full md:w-auto">About</li>
+                            <li className="w-full md:w-auto">Journal</li>
+                            <li className="w-full md:w-auto">Custom</li>
                         </ul>
 
-                        <ul className="flex flex-wrap space-x-2 mt-4 md:space-x-10 md:justify-start">
-
-                            <li className="w-1/4 md:w-auto">FAQ&apos;s</li>
-                            <li className="w-1/2 md:w-auto">Returns</li>
-                            <li className="w-1/4 md:w-auto">Ordering</li>
-                            <li className="w-1/2 md:w-auto">Shipping</li>
-                            <li className="w-1/2 md:w-auto">Personalization Policies</li>
-                            
+                        <ul className="grid grid-cols-2 gap-2 mt-4 md:flex md:flex-wrap md:space-x-10 md:justify-start">
+                            <li className="w-full md:w-auto">FAQ&apos;s</li>
+                            <li className="w-full md:w-auto">Returns</li>
+                            <li className="w-full md:w-auto">Ordering</li>
+                            <li className="w-full md:w-auto">Shipping</li>
+                            <li className="w-full md:w-auto">Personalization Policies</li>
                         </ul>
                     </div>
                 </div>
