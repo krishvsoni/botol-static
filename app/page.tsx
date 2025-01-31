@@ -9,12 +9,11 @@ import { Footer } from '../components/Footer';
 
 const BotolWebsite = () => {
   const [isSmallScreen, setIsSmallScreen] = useState(false);
-
+// krishsoni.co
   useEffect(() => {
     const handleResize = () => {
       setIsSmallScreen(window.innerWidth <= 768); 
     };
-// krishsoni.co
     handleResize(); 
     window.addEventListener('resize', handleResize); 
 
@@ -91,48 +90,51 @@ const BotolWebsite = () => {
               </motion.div>
             </div>
 
-            {/* Text Content */}
-            <AnimatePresence>
-              <motion.div
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 4 }}
-              className="absolute top-[400px] left-1/5 transform -translate-x-1/2 -translate-y-1/2 text-center z-20"
-              >
-              <h1 className="text-4xl sm:text-8xl font-bold mb-4">
-                The Ultimate Companion
-                <br />
-                for Hydration
-              </h1>
-              <p className="text-xl sm:text-3xl mb-4">
-                we believe in the power of hydration.
-                <br />
-                Our mission is simple yet vital
-              </p>
-              <button className="px-6 py-3 bg-gradient-to-r from-[#00d1ff] to-[#1a83ff] hover:from-[#1a83ff]  transition-all duration-300 text-white text-lg sm:text-2xl rounded-full">
-                Inquiry Now
-              </button>
-              </motion.div>
-            </AnimatePresence>
+            {!isSmallScreen && (
+              <>
+                <AnimatePresence>
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, delay: 4 }}
+                    className="absolute top-[400px] left-1/5 transform -translate-x-1/2 -translate-y-1/2 text-center z-20"
+                  >
+                    <h1 className="text-4xl sm:text-8xl font-bold mb-4">
+                      The Ultimate Companion
+                      <br />
+                      for Hydration
+                    </h1>
+                    <p className="text-xl sm:text-3xl mb-4">
+                      we believe in the power of hydration.
+                      <br />
+                      Our mission is simple yet vital
+                    </p>
+                    <button className="px-6 py-3 bg-gradient-to-r from-[#00d1ff] to-[#1a83ff] hover:from-[#1a83ff]  transition-all duration-300 text-white text-lg sm:text-2xl rounded-full">
+                      Inquiry Now
+                    </button>
+                  </motion.div>
+                </AnimatePresence>
 
-            <div className="flex justify-between items-center w-full absolute top-0 mt-[750px] z-30">
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 2 }}
-                className="w-1/3 flex justify-start ml-4"
-              >
-                <Image src="/assets/2.svg" alt="Small Bottle 1" width={120} height={120} />
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5, delay: 2 }}
-                className="w-1/3 mr-4 flex justify-end"
-              >
-                <Image src="/assets/3.svg" alt="Small Bottle 2" width={120} height={120} />
-              </motion.div>
-            </div>
+                <div className="flex justify-between items-center w-full absolute top-0 mt-[750px] z-30">
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 2 }}
+                    className="w-1/3 flex justify-start ml-4"
+                  >
+                    <Image src="/assets/2.svg" alt="Small Bottle 1" width={120} height={120} />
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.5, delay: 2 }}
+                    className="w-1/3 mr-4 flex justify-end"
+                  >
+                    <Image src="/assets/3.svg" alt="Small Bottle 2" width={120} height={120} />
+                  </motion.div>
+                </div>
+              </>
+            )}
           </div>
         </main>
 
@@ -140,8 +142,6 @@ const BotolWebsite = () => {
         <Products />
         <Footer />
       </div>
-
-
     </>
   );
 };
